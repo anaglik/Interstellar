@@ -19,20 +19,43 @@
 // THE SOFTWARE.
 
 /// Observer tokens are created by observables to hande unsubscription. You are not supposed to create them directly.
+//public final class ObserverToken: Hashable {
+//    private weak var observable: Unsubscribable?
+//    public let hashValue: Int
+//
+//    internal init (observable: Unsubscribable, hashValue: Int) {
+//        self.observable = observable
+//        self.hashValue = hashValue
+//    }
+//
+//    public func unsubscribe() {
+//        observable?.unsubscribe(self)
+//    }
+//}
+//
+//public func ==(lhs: ObserverToken, rhs: ObserverToken) -> Bool {
+//    return lhs.hashValue == rhs.hashValue
+//}
+
+
 public final class ObserverToken: Hashable {
+    public static func == (lhs: ObserverToken, rhs: ObserverToken) -> Bool {
+        return lhs.hashingValue == rhs.hashingValue
+    }
+    
     private weak var observable: Unsubscribable?
-    public let hashValue: Int
+    public let hashingValue: Int
     
     internal init (observable: Unsubscribable, hashValue: Int) {
         self.observable = observable
-        self.hashValue = hashValue
+        self.hashingValue = hashValue
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.hashingValue)
     }
     
     public func unsubscribe() {
         observable?.unsubscribe(self)
     }
-}
-
-public func ==(lhs: ObserverToken, rhs: ObserverToken) -> Bool {
-    return lhs.hashValue == rhs.hashValue
 }
