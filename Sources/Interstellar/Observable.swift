@@ -78,8 +78,7 @@ public final class Observable<T>: Unsubscribable {
     @discardableResult public func subscribe(_ observer: @escaping (T) -> Void) -> ObserverToken {
         var token: ObserverToken!
         mutex.lock {
-            let newHashValue = (observers.keys.map({$0.hashValue}).max() ?? -1) + 1
-            token = ObserverToken(observable: self, hashValue: newHashValue)
+            token = ObserverToken(observable: self)
             if !(options.contains(.Once) && value != nil) {
                 observers[token] = observer
             }
