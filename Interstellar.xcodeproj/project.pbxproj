@@ -28,6 +28,7 @@
 		8F5775CD1C118F6B002E134D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5775C91C118F6B002E134D /* Result.swift */; };
 		8FC7A40E1CC12EAA00710873 /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC41B1CC03E380055DC5C /* Mutex.swift */; };
 		8FC7A40F1CC12EAB00710873 /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC41B1CC03E380055DC5C /* Mutex.swift */; };
+		A19FA8822625B73900B4C3AA /* Fail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19FA8812625B73900B4C3AA /* Fail.swift */; };
 		B4010EDC1D99919D00E6AC8E /* WaitingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010ECC1D99916E00E6AC8E /* WaitingTests.swift */; };
 		B4010EDD1D99919D00E6AC8E /* ThreadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010ECD1D99916E00E6AC8E /* ThreadingTests.swift */; };
 		B4010EE11D9991A100E6AC8E /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010ED51D99918000E6AC8E /* ResultTests.swift */; };
@@ -79,6 +80,7 @@
 		8F5775E11C118F93002E134D /* Interstellar_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Interstellar_Info.plist; path = Sources/Interstellar_Info.plist; sourceTree = SOURCE_ROOT; };
 		8F5775E21C118F93002E134D /* Interstellar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Interstellar.h; path = Sources/Interstellar.h; sourceTree = SOURCE_ROOT; };
 		8F5775E31C118FAC002E134D /* InterstellarTests_Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = InterstellarTests_Info.plist; path = Tests/InterstellarTests_Info.plist; sourceTree = SOURCE_ROOT; };
+		A19FA8812625B73900B4C3AA /* Fail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fail.swift; sourceTree = "<group>"; };
 		B4010ECC1D99916E00E6AC8E /* WaitingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitingTests.swift; path = Tests/WarpdriveTests/WaitingTests.swift; sourceTree = SOURCE_ROOT; };
 		B4010ECD1D99916E00E6AC8E /* ThreadingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadingTests.swift; path = Tests/WarpdriveTests/ThreadingTests.swift; sourceTree = SOURCE_ROOT; };
 		B4010ED51D99918000E6AC8E /* ResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTests.swift; path = Tests/InterstellarTests/ResultTests.swift; sourceTree = SOURCE_ROOT; };
@@ -193,6 +195,7 @@
 				B4010ED51D99918000E6AC8E /* ResultTests.swift */,
 				B4010ED61D99918000E6AC8E /* ResultObservableTests.swift */,
 				B4010ED71D99918000E6AC8E /* ObservableTests.swift */,
+				A19FA8812625B73900B4C3AA /* Fail.swift */,
 			);
 			path = InterstellarTests;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4010EE31D9991A100E6AC8E /* ObservableTests.swift in Sources */,
+				A19FA8822625B73900B4C3AA /* Fail.swift in Sources */,
 				B4010EE21D9991A100E6AC8E /* ResultObservableTests.swift in Sources */,
 				B4010EE11D9991A100E6AC8E /* ResultTests.swift in Sources */,
 				B4010EDD1D99919D00E6AC8E /* ThreadingTests.swift in Sources */,
